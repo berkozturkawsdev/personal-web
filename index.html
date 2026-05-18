@@ -1,442 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berk Ozturk - Full Stack Developer Portfolio - Open for Freelance Work</title>
 
-  <title>Berk Öztürk | Full Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #111;
+            line-height: 1.6;
+        }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b1120;
-      color: #f8fafc;
-      line-height: 1.6;
-    }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        /* HERO */
+        header {
+            padding: 90px 0;
+            border-bottom: 1px solid #eee;
+        }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
+        .hero-content {
+            max-width: 750px;
+            text-align: left;
+        }
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(11, 17, 32, 0.95);
-      border-bottom: 1px solid #1e293b;
-      backdrop-filter: blur(10px);
-    }
+        h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
 
-    .nav-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
+        h2 {
+            color: #2563eb;
+        }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #38bdf8;
-    }
+        .highlight {
+            color: #2563eb;
+            font-weight: bold;
+            margin: 15px 0;
+        }
 
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
+        p {
+            color: #444;
+            margin-top: 12px;
+            font-size: 18px;
+        }
 
-    .nav-links a {
-      color: #cbd5e1;
-      transition: 0.3s;
-    }
+        /* SOCIAL ICONS */
+        .social {
+            margin-top: 25px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
 
-    .nav-links a:hover {
-      color: #38bdf8;
-    }
+        .icon {
+            width: 44px;
+            height: 44px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(circle at top right, rgba(56,189,248,0.15), transparent 30%),
-        #0b1120;
-    }
+        .icon:hover {
+            border-color: #2563eb;
+            transform: translateY(-3px);
+        }
 
-    .hero-content {
-      max-width: 750px;
-    }
+        .icon svg {
+            width: 22px;
+            height: 22px;
+            fill: #111;
+        }
 
-    .hero h1 {
-      font-size: 64px;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
+        /* SECTIONS */
+        section {
+            padding: 70px 0;
+        }
 
-    .hero h1 span {
-      color: #38bdf8;
-    }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
 
-    .hero p {
-      font-size: 20px;
-      color: #cbd5e1;
-      margin-bottom: 35px;
-    }
+        h2 span {
+            color: #2563eb;
+        }
 
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
 
-    .btn {
-      padding: 14px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
-    }
+        .card {
+            border: 1px solid #eee;
+            padding: 22px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
 
-    .btn-primary {
-      background: #38bdf8;
-      color: #0b1120;
-    }
+        .card:hover {
+            border-color: #2563eb;
+            transform: translateY(-4px);
+        }
 
-    .btn-primary:hover {
-      background: #0ea5e9;
-    }
+        .card h3 {
+            margin-bottom: 10px;
+        }
 
-    .btn-secondary {
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
-    }
+        .card p {
+            font-size: 15px;
+            color: #555;
+        }
 
-    .btn-secondary:hover {
-      background: #38bdf8;
-      color: #0b1120;
-    }
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-    section {
-      padding: 90px 0;
-    }
+        .skill {
+            border: 1px solid #eee;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 14px;
+        }
 
-    .section-title {
-      font-size: 40px;
-      margin-bottom: 50px;
-      text-align: center;
-      color: #38bdf8;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #111827;
-      padding: 30px;
-      border-radius: 16px;
-      border: 1px solid #1e293b;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #38bdf8;
-    }
-
-    .card h3 {
-      margin-bottom: 15px;
-      font-size: 24px;
-    }
-
-    .card p {
-      color: #cbd5e1;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .skill {
-      background: #111827;
-      border: 1px solid #1e293b;
-      padding: 12px 18px;
-      border-radius: 999px;
-      color: #cbd5e1;
-    }
-
-    .about {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about p {
-      color: #cbd5e1;
-      font-size: 18px;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      color: #cbd5e1;
-      margin-bottom: 25px;
-      font-size: 18px;
-    }
-
-    footer {
-      padding: 40px 0;
-      text-align: center;
-      border-top: 1px solid #1e293b;
-      color: #94a3b8;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .nav-links {
-        gap: 15px;
-        font-size: 14px;
-      }
-    }
-  </style>
+        footer {
+            text-align: left;
+            padding: 30px 0;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+    </style>
 </head>
 
 <body>
 
-  <nav>
-    <div class="container nav-content">
-      <div class="logo">Berk.dev</div>
+    <!-- HERO -->
+    <header>
+        <div class="container hero-content">
 
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+            <h1>Berk Ozturk </h1>
+            <h2>Full Stack Developer</h2>
+            <p class="highlight">Available for Freelance Work</p>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
+            <p>
+                I’m a Full Stack Developer with 10+ years of experience across big corporate environments,
+                startups, and freelance projects. I build scalable web applications using .NET, React, AWS, and modern
+                DevOps practices.
+            </p>
 
-        <h1>
-          Full Stack Developer<br />
-          Building Modern <span>Web & Cloud</span> Solutions
-        </h1>
+            <p>
+                Currently focused on freelance opportunities where I help businesses design, build,
+                and scale reliable software systems.
+            </p>
 
-        <p>
-          I develop scalable full stack applications using
-          .NET, React, AWS, Docker, and modern DevOps practices.
-          From frontend interfaces to backend infrastructure.
-        </p>
+            <!-- SOCIAL ICONS -->
+            <div class="social">
 
-        <div class="buttons">
-          <a href="#contact" class="btn btn-primary">
-            Hire Me
-          </a>
+                <!-- GitHub -->
+                <a class="icon" href="https://github.com/berkozturkawsdev/" target="_blank">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8 2.1 3.3 1.5.1-.8.4-1.3.7-1.6-2.5-.3-5.1-1.3-5.1-5.8 0-1.3.4-2.4 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a10.8 10.8 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.1 1.9 1.1 3.2 0 4.5-2.6 5.5-5.1 5.8.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A11.3 11.3 0 0 0 23.3 12C23.3 5.6 18.3.5 12 .5z" />
+                    </svg>
+                </a>
 
-          <a href="https://github.com/berkozturkawsdev" target="_blank" class="btn btn-secondary">
-            GitHub
-          </a>
+                <!-- LinkedIn -->
+                <a class="icon" href="https://www.linkedin.com/in/berk-ozturk-56a764a8/" target="_blank">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v5.6zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4z" />
+                    </svg>
+                </a>
+
+                <!-- Upwork  -->
+                <a class="icon" href="https://www.upwork.com/freelancers/~0167844593b926df19" target="_blank">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M19.5 7.5c-1.9 0-3.4 1-4.4 2.6-.9-1.6-2.1-3.6-4.3-3.6-2.6 0-4.7 2.1-4.7 4.7s2.1 4.7 4.7 4.7c1 0 1.9-.3 2.7-.8l.3-.2c.6.9 1.5 1.7 2.6 2.2 1 .5 2.1.7 3.2.7v-2.2c-1.6 0-3.1-.6-3.9-1.7.9-1.2 1.8-2.9 2.3-4.2.2-.5.4-1 .4-1.4 0-.5-.1-.8-.1-1zm-9.4 6.2c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3z" />
+                    </svg>
+                </a>
+                <!-- Email -->
+                <a class="icon" href="mailto:berkozturkdev@gmail.com">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                </a>
+
+            </div>
+
         </div>
+    </header>
 
-      </div>
-    </div>
-  </section>
+    <!-- SERVICES -->
+    <section>
+        <div class="container">
+            <h2>Services</h2>
 
-  <section id="services">
-    <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <h3>Frontend</h3>
+                    <p>React, Next.js, modern UI development.</p>
+                </div>
 
-      <h2 class="section-title">Services</h2>
+                <div class="card">
+                    <h3>Backend</h3>
+                    <p>.NET Core APIs, clean architecture, scalable systems.</p>
+                </div>
 
-      <div class="grid">
-
-        <div class="card">
-          <h3>Frontend Development</h3>
-
-          <p>
-            Responsive modern interfaces using React,
-            Next.js, TypeScript, Tailwind CSS,
-            and performance-focused UI architecture.
-          </p>
+                <div class="card">
+                    <h3>Cloud</h3>
+                    <p>AWS, Docker, CI/CD automation pipelines.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-          <h3>Backend Development</h3>
+    <!-- EXPERIENCE -->
+    <section>
+        <div class="container">
+            <h2>Experience</h2>
 
-          <p>
-            ASP.NET Core APIs, authentication systems,
-            scalable architectures, integrations,
-            and enterprise-grade backend services.
-          </p>
+            <div class="card">
+                <h3>10+ Years Experience</h3>
+                <p>
+                    Corporate, startup, and freelance experience building scalable systems,
+                    backend platforms, and full stack applications.
+                </p>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-          <h3>Cloud & DevOps</h3>
+    <!-- SKILLS -->
+    <section>
+        <div class="container">
+            <h2>Tech Stack</h2>
 
-          <p>
-            AWS infrastructure, Docker containers,
-            GitLab CI/CD pipelines, ECS deployments,
-            and cloud automation workflows.
-          </p>
+            <div class="skills">
+                <div class="skill">C#</div>
+                <div class="skill">.NET</div>
+                <div class="skill">React</div>
+                <div class="skill">Next.js</div>
+                <div class="skill">AWS</div>
+                <div class="skill">Docker</div>
+                <div class="skill">GitLab CI/CD</div>
+            </div>
         </div>
+    </section>
 
-      </div>
+    <!-- PROJECTS -->
+    <section>
+        <div class="container">
+            <h2>Projects</h2>
 
-    </div>
-  </section>
+            <div class="grid">
+                <div class="card">
+                    <h3>CI/CD Pipeline</h3>
+                    <p>Automated deployments and testing workflows.</p>
+                </div>
 
-  <section id="projects">
-    <div class="container">
+                <div class="card">
+                    <h3>Full Stack App</h3>
+                    <p>React + .NET + AWS production system.</p>
+                </div>
 
-      <h2 class="section-title">Projects</h2>
-
-      <div class="grid">
-
-        <div class="card">
-          <h3>Cloud SaaS Platform</h3>
-
-          <p>
-            Built a scalable full stack SaaS application
-            using React, ASP.NET Core, PostgreSQL,
-            Docker, and AWS ECS infrastructure.
-          </p>
+                <div class="card">
+                    <h3>Backend System</h3>
+                    <p>Scalable API architecture with clean design.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-          <h3>Enterprise CI/CD System</h3>
-
-          <p>
-            Automated testing and deployment pipelines
-            with GitLab CI/CD, reducing deployment time
-            and improving release reliability.
-          </p>
+    <footer>
+        <div class="container">
+            © 2026 Berk Ozturk — Available for Freelance Work
         </div>
-
-        <div class="card">
-          <h3>Version Control Backend</h3>
-
-          <p>
-            Developed a Git-like backend system using
-            .NET 8 Minimal APIs and Clean Architecture
-            principles for scalable code management.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-
-      <h2 class="section-title">Tech Stack</h2>
-
-      <div class="skills">
-        <div class="skill">C#</div>
-        <div class="skill">.NET</div>
-        <div class="skill">ASP.NET Core</div>
-        <div class="skill">React</div>
-        <div class="skill">Next.js</div>
-        <div class="skill">TypeScript</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Tailwind CSS</div>
-        <div class="skill">AWS</div>
-        <div class="skill">Docker</div>
-        <div class="skill">GitLab CI/CD</div>
-        <div class="skill">PostgreSQL</div>
-        <div class="skill">Redis</div>
-        <div class="skill">Entity Framework Core</div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-
-      <h2 class="section-title">About Me</h2>
-
-      <div class="about">
-        <p>
-          I'm a full stack developer focused on building
-          scalable web applications, cloud infrastructure,
-          and modern user experiences. I enjoy solving
-          complex backend problems while also creating
-          clean and responsive frontend interfaces.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-
-      <h2 class="section-title">Contact</h2>
-
-      <div class="contact">
-
-        <p>
-          Available for freelance projects,
-          long-term collaborations,
-          and remote opportunities.
-        </p>
-
-        <div class="buttons">
-          <a href="mailto:berkozturkawsdev@gmail.com" class="btn btn-primary">
-            Email Me
-          </a>
-
-          <a href="https://www.linkedin.com/in/berk-ozturk-56a764a8/" target="_blank" class="btn btn-secondary">
-            LinkedIn
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      © 2026 Berk Öztürk — Full Stack Developer
-    </div>
-  </footer>
+    </footer>
 
 </body>
+
 </html>
