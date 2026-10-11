@@ -1,12 +1,14 @@
 {
-    "version": 1,
-    "ads": {
-        "enabled": true,
-        "enable_interstitial": true,
-        "enable_rewarded": false,
-        "game_overs_per_ad": 3,
-        "minimum_seconds_between_ads": 90,
-        "retry_delay_seconds": 60,
-        "use_test_ads": true
-    }
+  "version": 1,
+  "ads": {
+    "enabled": true,
+    "enable_interstitial": true,
+    "enable_rewarded": false,
+    "game_overs_per_ad": 3,
+    "minimum_seconds_between_ads": 90,
+    "retry_delay_seconds": 60,
+    "use_test_ads": true,
+    "ios_interstitial_id": "ca-app-pub-1234567890123456/1111111111",
+    "ios_rewarded_id": "ca-app-pub-1234567890123456/2222222222"
+  }
 }
