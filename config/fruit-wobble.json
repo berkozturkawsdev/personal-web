@@ -8,8 +8,8 @@
         "minimum_seconds_between_ads": 90,
         "retry_delay_seconds": 60,
         "use_test_ads": false,
-        "ios_interstitial_id": "ca-app-pub-1234567890123456/1111111111",
-        "ios_rewarded_id": "ca-app-pub-1234567890123456/2222222222"
+        "ios_interstitial_id": "ca-app-pub-4170956282618856/3303640476",
+        "ios_rewarded_id": ""
     },
     "game_center": {
         "enabled": true,
