@@ -2,9 +2,9 @@
     "version": 1,
     "ads": {
         "enabled": true,
-        "enable_interstitial": false,
+        "enable_interstitial": true,
         "enable_rewarded": true,
-        "game_overs_per_ad": 3,
+        "game_overs_per_ad": 2,
         "minimum_seconds_between_ads": 90,
         "retry_delay_seconds": 60,
         "use_test_ads": true,
