@@ -7,7 +7,7 @@
         "game_overs_per_ad": 2,
         "minimum_seconds_between_ads": 90,
         "retry_delay_seconds": 60,
-        "use_test_ads": true,
+        "use_test_ads": false,
         "ios_interstitial_id": "ca-app-pub-4170956282618856/4908276894",
         "ios_rewarded_id": "ca-app-pub-4170956282618856/2077918249"
     },
