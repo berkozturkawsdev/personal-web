@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "ads": {
+        "enabled": false,
+        "enable_interstitial": false,
+        "enable_rewarded": false,
+        "game_overs_per_ad": 2,
+        "minimum_seconds_between_ads": 90,
+        "retry_delay_seconds": 60,
+        "use_test_ads": false,
+        "ios_interstitial_id": "ca-app-pub-5745703590334614/5635765127",
+        "ios_rewarded_id": "ca-app-pub-5745703590334614/9710741508"
+    },
+    "game_center": {
+        "enabled": true,
+        "leaderboard_id": "sealide_high_score"
+    }
+}
