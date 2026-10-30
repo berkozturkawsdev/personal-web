@@ -13,6 +13,6 @@
     },
     "game_center": {
         "enabled": true,
-        "leaderboard_id": "sealide_high_score"
+        "leaderboard_id": "high_scores"
     }
 }
