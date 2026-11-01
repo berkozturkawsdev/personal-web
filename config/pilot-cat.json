@@ -13,6 +13,6 @@
     },
     "game_center": {
         "enabled": true,
-        "leaderboard_id": "high_scores"
+        "leaderboard_id": "com.bozsoft.pilotcat.adventure_stars"
     }
 }
